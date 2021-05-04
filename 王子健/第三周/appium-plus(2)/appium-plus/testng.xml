@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="test_wyr">
+        <classes>
+            <class name="com.appium_plus.testcase.wyr.TestCase"></class>
+        </classes>
+    </test>
+
+    <test name="test_lmr">
+        <classes>
+            <class name="com.appium_plus.testcase.lmr.TestCase_mainPage"></class>
+            <class name="com.appium_plus.testcase.lmr.TestCase_addPage"></class>
+            <class name="com.appium_plus.testcase.lmr.TestCase_cookPage"></class>
+            <class name="com.appium_plus.testcase.lmr.TestCase_likeEatPage"></class>
+            <class name="com.appium_plus.testcase.lmr.TestCase_loginPage"></class>
+            <class name="com.appium_plus.testcase.lmr.TestCase_personPage"></class>
+            <class name="com.appium_plus.testcase.lmr.TestCase_signinPage"></class>
+        </classes>
+    </test>
+</suite>

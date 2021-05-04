@@ -1,0 +1,14 @@
+package com.appium_plus.po.wyr;
+
+import lombok.Data;
+
+/**
+ * "爱吃"页面
+ */
+@Data
+public class FavoritesPage extends BasePage{
+
+    //底部"爱吃"选项的xpath和index
+    private String favoritesXpath = "xpath=//android.widget.Button[@content-desc=\"爱吃, tab, 4 of 5\"]";
+    private int favoritesIndex = 0;
+}
