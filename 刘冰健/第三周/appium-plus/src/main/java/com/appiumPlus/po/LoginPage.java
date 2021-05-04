@@ -17,7 +17,7 @@ public class LoginPage {
     private int loginButtonIndex=4;
 
     //主页元素
-    private String mainPageElem = "//android.widget.Button[@content-desc=\"主页, tab, 1 of 5\"]";
+    private String mainPageElem = "xpath=//android.widget.Button[@content-desc=\"主页, tab, 1 of 5\"]";
 
     public String getUsername() {
         return username;
