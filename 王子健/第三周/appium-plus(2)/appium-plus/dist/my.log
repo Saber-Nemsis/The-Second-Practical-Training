@@ -1,0 +1,122 @@
+[WARN ] 2021-04-26 17:22:07,779 com.appium_plus.utils.LogUtil - android.widget.TextViewcan't find element by prefix.
+[WARN ] 2021-04-28 09:50:31,153 com.appium_plus.utils.LogUtil - android.widget.TextViewcan't find element by prefix.
+[WARN ] 2021-04-28 09:50:31,155 com.appium_plus.utils.LogUtil - android.widget.EditTextcan't find element by prefix.
+[WARN ] 2021-04-28 09:50:31,155 com.appium_plus.utils.LogUtil - android.widget.EditTextcan't find element by prefix.
+[WARN ] 2021-04-28 09:50:31,156 com.appium_plus.utils.LogUtil - android.widget.TextViewcan't find element by prefix.
+[ERROR] 2021-04-28 10:13:19,517 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 4, Size: 2
+[ERROR] 2021-04-28 10:13:49,604 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+[ERROR] 2021-04-28 10:40:19,109 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+[ERROR] 2021-04-28 14:03:12,017 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 11, Size: 2
+[ERROR] 2021-04-28 14:21:21,022 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 4, Size: 3
+[ERROR] 2021-04-28 14:29:21,281 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 30, Size: 23
+[ERROR] 2021-04-28 14:30:29,772 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 30, Size: 3
+[ERROR] 2021-04-29 10:54:21,462 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+[ERROR] 2021-04-30 15:24:25,362 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 6, Size: 3
+[ERROR] 2021-04-30 15:24:33,715 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 3, Size: 3
+[ERROR] 2021-04-30 15:24:41,988 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 8, Size: 3
+[ERROR] 2021-04-30 15:24:50,343 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 4, Size: 3
+[ERROR] 2021-04-30 15:25:09,929 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 5, Size: 3
+[ERROR] 2021-04-30 15:25:18,272 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 7, Size: 3
+[ERROR] 2021-04-30 15:30:23,819 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+[ERROR] 2021-04-30 15:32:56,596 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 6, Size: 3
+[ERROR] 2021-04-30 15:33:04,929 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 3, Size: 3
+[ERROR] 2021-04-30 15:33:13,133 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 8, Size: 3
+[ERROR] 2021-04-30 15:33:21,453 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 4, Size: 3
+[ERROR] 2021-04-30 15:33:41,011 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 5, Size: 3
+[ERROR] 2021-05-03 22:21:56,524 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+[ERROR] 2021-05-03 22:23:34,437 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: bacdc350-8d8e-4bd6-8066-0c87c76e7043
+*** Element info: {Using=class name, value=android.widget.TextView}
+[ERROR] 2021-05-03 22:23:34,457 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: bacdc350-8d8e-4bd6-8066-0c87c76e7043
+*** Element info: {Using=class name, value=android.widget.EditText}
+[ERROR] 2021-05-03 22:23:34,474 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: bacdc350-8d8e-4bd6-8066-0c87c76e7043
+*** Element info: {Using=class name, value=android.widget.EditText}
+[ERROR] 2021-05-03 22:23:34,493 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: bacdc350-8d8e-4bd6-8066-0c87c76e7043
+*** Element info: {Using=class name, value=android.widget.TextView}
+[ERROR] 2021-05-03 22:23:34,526 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: bacdc350-8d8e-4bd6-8066-0c87c76e7043
+*** Element info: {Using=xpath, value=//android.widget.Button[@content-desc="主页, tab, 1 of 5"]}
+[ERROR] 2021-05-03 22:24:18,096 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+[ERROR] 2021-05-03 22:24:48,358 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+[ERROR] 2021-05-03 22:24:52,492 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: 2554ef64-a0f0-4197-bd18-d49b11ba6353
+*** Element info: {Using=xpath, value=//android.widget.Button[@content-desc="主页, tab, 1 of 5"]}
+[ERROR] 2021-05-03 22:25:30,217 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+[ERROR] 2021-05-03 22:26:00,266 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 4, Size: 0
+[ERROR] 2021-05-03 22:26:09,081 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1600x900, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 852, left: 0, top: 48, width: 1600}, warnings: {}, webStorageEnabled: false}
+Session ID: ef4c1936-f914-45bd-9dc3-8171f89c65b4
+*** Element info: {Using=xpath, value=//android.widget.Button[@content-desc="主页, tab, 1 of 5"]}
+[WARN ] 2021-05-04 17:30:42,855 com.appium_plus.utils.LogUtil - 6656c819-7a2c-4494-a1bf-3d712acf0527can't find element by prefix.
+[ERROR] 2021-05-04 17:30:42,859 com.appium_plus.utils.LogUtil - java.lang.NullPointerException
+[WARN ] 2021-05-04 17:35:22,811 com.appium_plus.utils.LogUtil - android.widget.ImageViewcan't find element by prefix.
+[ERROR] 2021-05-04 17:35:22,815 com.appium_plus.utils.LogUtil - java.lang.NullPointerException
+[WARN ] 2021-05-04 17:38:10,623 com.appium_plus.utils.LogUtil - android.widget.ImageViewcan't find element by prefix.
+[ERROR] 2021-05-04 17:38:10,627 com.appium_plus.utils.LogUtil - java.lang.NullPointerException
+[ERROR] 2021-05-04 17:41:18,057 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1080x1920, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1872, left: 0, top: 48, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a76141d6-2ff3-42d5-a76c-1407319f5526
+*** Element info: {Using=xpath, value=//android.widget.Button[@content-desc="爱吃, tab, 4 of 5"]}
+[ERROR] 2021-05-04 17:41:18,078 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1080x1920, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1872, left: 0, top: 48, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a76141d6-2ff3-42d5-a76c-1407319f5526
+*** Element info: {Using=class name, value=android.widget.ImageView}
+[ERROR] 2021-05-04 17:51:53,759 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+[ERROR] 2021-05-04 17:54:13,081 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+[WARN ] 2021-05-04 18:04:53,200 com.appium_plus.utils.LogUtil - android.view.ViewGroupcan't find element by prefix.
+[ERROR] 2021-05-04 18:04:53,203 com.appium_plus.utils.LogUtil - java.lang.NullPointerException
+[ERROR] 2021-05-04 18:05:48,546 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1080x1920, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1872, left: 0, top: 48, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: ee4e57bd-8e39-4408-86d7-d81399d60ae6
+*** Element info: {Using=class name, value=android.widget.TextView}
+[ERROR] 2021-05-04 18:05:48,573 com.appium_plus.utils.LogUtil - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-158HMSJ', ip: '192.168.91.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.projectname.MainActivity, appPackage: com.projectname, automationName: uiautomator2, deviceName: 127.0.0.1:62001, platformName: android, platformVersion: 7}, deviceApiLevel: 25, deviceManufacturer: HUAWEI, deviceModel: TAS-AN00, deviceName: 127.0.0.1:62001, deviceScreenDensity: 320, deviceScreenSize: 1080x1920, deviceUDID: 127.0.0.1:62001, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 48, takesScreenshot: true, viewportRect: {height: 1872, left: 0, top: 48, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: ee4e57bd-8e39-4408-86d7-d81399d60ae6
+*** Element info: {Using=xpath, value=//android.widget.Button[@content-desc="爱吃, tab, 4 of 5"]}
+[WARN ] 2021-05-04 18:05:50,575 com.appium_plus.utils.LogUtil - android.view.ViewGroupcan't find element by prefix.
+[ERROR] 2021-05-04 18:05:50,576 com.appium_plus.utils.LogUtil - java.lang.NullPointerException
+[ERROR] 2021-05-04 18:08:56,827 com.appium_plus.utils.LogUtil - java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
+[WARN ] 2021-05-04 18:30:47,003 com.appium_plus.utils.LogUtil - android.widget.TextViewcan't find element by prefix.
+[ERROR] 2021-05-04 18:30:47,006 com.appium_plus.utils.LogUtil - java.lang.NullPointerException
