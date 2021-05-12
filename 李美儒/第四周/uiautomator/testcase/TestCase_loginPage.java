@@ -1,5 +1,7 @@
 package com.uiautomator_plus.testcase.lmr;
 
+import android.view.KeyEvent;
+
 import com.uiautomator_plus.core.BaseTest;
 import com.uiautomator_plus.po.lmr.EntrancePage;
 import com.uiautomator_plus.po.lmr.LoginPage;
@@ -24,8 +26,9 @@ public class TestCase_loginPage extends BaseTest {
         getEngine().click("text="+entrancePage.getLoginButtonText(),entrancePage.getLoginButtonIndex());
         getEngine().clearAndType("class="+loginPage.getUnameETClassName(),loginPage.getUnameETIndex(),uname);
         getEngine().clearAndType("class="+loginPage.getPwdETClassName(),loginPage.getPwdETIndex(),pwd);
-        getEngine().click("class="+loginPage.getRegisterButtonText(),loginPage.getRegisterButtonIndex());
+        getEngine().click("text="+loginPage.getRegisterButtonText(),loginPage.getRegisterButtonIndex());
         Assert.assertTrue(getEngine().isElementPresent("text="+mainPage.getMainPageButtonText(),mainPage.getMainPageButtonIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //登陆测试

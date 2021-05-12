@@ -1,5 +1,7 @@
 package com.uiautomator_plus.testcase.lmr;
 
+import android.view.KeyEvent;
+
 import androidx.test.uiautomator.UiCollection;
 import androidx.test.uiautomator.UiObjectNotFoundException;
 import androidx.test.uiautomator.UiScrollable;
@@ -10,6 +12,7 @@ import com.uiautomator_plus.po.lmr.CookPage;
 import com.uiautomator_plus.po.lmr.EntrancePage;
 import com.uiautomator_plus.po.lmr.LoginPage;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,6 +38,7 @@ public class TestCase_cookPage extends BaseTest {
         getEngine().click("text="+cookPage.getFirstFoodText(),cookPage.getFirstFoodIndex());
         getEngine().click("class=android.widget.TextView",8);
         Assert.assertEquals(cookPage.getFirstFoodText(),"外加里嫩~炸豆腐丸子");
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
 
@@ -42,14 +46,25 @@ public class TestCase_cookPage extends BaseTest {
     //步骤描述：滑动查看做饭步骤的具体内容
     //bug描述：存在相同内容重复的做饭步骤
     @Test
-    public void test() throws UiObjectNotFoundException {
+    public void test_see_introduction() throws UiObjectNotFoundException {
         getEngine().click("text="+cookPage.getCookPageText(),cookPage.getCookPageIndex());
         getEngine().click("text="+cookPage.getFirstFoodText(),cookPage.getFirstFoodIndex());
         Assert.assertTrue(getEngine().isElementPresent("text="+cookPage.getStepText(),cookPage.getStepIndex()));
         UiScrollable scrollable=new UiScrollable(new UiSelector().className(cookPage.getCookPageScrollViewClassName()).scrollable(true));
         scrollable.scrollIntoView(new UiSelector().text("步骤4："));
         Assert.assertTrue(getEngine().isElementPresent("text="+cookPage.getStepText(),cookPage.getStepIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
 
+    }
+
+    @After
+    public void quit() {
+        if (this.getDevice() != null) {
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+        }
     }
 
 }

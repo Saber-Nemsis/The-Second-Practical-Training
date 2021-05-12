@@ -1,10 +1,13 @@
 package com.uiautomator_plus.testcase.lmr;
 
+import android.view.KeyEvent;
+
 import com.uiautomator_plus.core.BaseTest;
 import com.uiautomator_plus.po.lmr.AddPage;
 import com.uiautomator_plus.po.lmr.EntrancePage;
 import com.uiautomator_plus.po.lmr.LoginPage;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -52,5 +55,12 @@ public class TestCase_addPage extends BaseTest {
         getEngine().click("text="+addPage.getConfirmAddText(),addPage.getConfirmAddIndex());
     }
 
-
+    @After
+    public void quit() {
+        if (this.getDevice() != null) {
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+        }
+    }
 }

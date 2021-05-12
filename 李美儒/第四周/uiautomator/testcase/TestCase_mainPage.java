@@ -1,6 +1,7 @@
 package com.uiautomator_plus.testcase.lmr;
 
 import android.util.Log;
+import android.view.KeyEvent;
 
 import androidx.test.uiautomator.UiCollection;
 import androidx.test.uiautomator.UiObject;
@@ -49,15 +50,16 @@ public class TestCase_mainPage extends BaseTest {
 
     //查看具体内容测试
     //步骤描述：点击导航栏中的水果蔬菜，点击分类下的一个view，看具体介绍是否满足对应
+    //有点问题：有时候显示全部的食物，有时候只显示两个苹果
     @Test
     public void test_click_fruitsAndVegetablesButton_content() throws UiObjectNotFoundException {
         getEngine().click("text="+mainPage.getFruitsAndVagetavlesButtonText(),mainPage.getFruitAndVegetablesButtonIndex());
-        Assert.assertTrue(getEngine().isElementPresent("text="+mainPage.getClickFruitAndVegetablesButtonScrollLastViewText(),0));
         UiCollection collection=new UiCollection(new UiSelector().className(mainPage.getClickButtonScrollViewClassName()).instance(0));
         int count=collection.getChildCount(new UiSelector().className("android.view.View"));
         UiObject uiObject =collection.getChildByInstance(new UiSelector().className("android.view.View"),count-1);
         getEngine().click("class=android.view.View",count-1);
         Assert.assertTrue(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
     //点击导航栏分类和具体介绍测试
     //步骤描述：点击导航栏中的肉蛋食品，查看所有显示的view是否满足肉蛋食品分类,并且点击进去查看是否是有关肉蛋食品的介绍
@@ -71,6 +73,7 @@ public class TestCase_mainPage extends BaseTest {
         UiObject uiObject =collection.getChildByInstance(new UiSelector().className("android.view.View"),count-1);
         getEngine().click("class=android.view.View",count-1);
         Assert.assertFalse(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //点击导航栏分类和具体介绍测试
@@ -85,6 +88,7 @@ public class TestCase_mainPage extends BaseTest {
         UiObject uiObject =collection.getChildByInstance(new UiSelector().className("android.view.View"),count-1);
         getEngine().click("class=android.view.View",count-1);
         Assert.assertFalse(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //点击导航栏分类和具体介绍测试
@@ -99,11 +103,13 @@ public class TestCase_mainPage extends BaseTest {
         UiObject uiObject =collection.getChildByInstance(new UiSelector().className("android.view.View"),count-1);
         getEngine().click("class=android.view.View",count-1);
         Assert.assertFalse(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //点击导航栏分类和具体介绍测试
     //步骤描述：点击导航栏中的零食饮品，查看所有显示的view是否满足零食饮品分类,并且点击进去查看是否是有关零食饮品的介绍
     //bug描述：点击导航栏中的下的有关零食饮品的类别，发现具体介绍不是有关零食饮品的，是苹果的
+    //1213
     @Test
     public void test_click_snacksAndDrinksButton() throws UiObjectNotFoundException {
         getEngine().click("text="+mainPage.getSnacksAndDrinksButtonText(),mainPage.getSnacksAndDrinksButtonIndex());
@@ -113,6 +119,7 @@ public class TestCase_mainPage extends BaseTest {
         UiObject uiObject =collection.getChildByInstance(new UiSelector().className("android.view.View"),count-1);
         getEngine().click("class=android.view.View",count-1);
         Assert.assertFalse(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //返回键测试
@@ -195,6 +202,7 @@ public class TestCase_mainPage extends BaseTest {
         getEngine().click("text="+searchText,mainPage.getSearchETIndex());
         getDevice().pressEnter();
         Assert.assertFalse(getEngine().isElementPresent("text="+mainPage.getSearchETDefaultText(),mainPage.getSearchETDefaultIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //搜索框测试
@@ -208,11 +216,15 @@ public class TestCase_mainPage extends BaseTest {
         getDevice().pressEnter();
         getEngine().clearAndType("text="+mainPage.getSearchETDefaultText(),mainPage.getSearchETDefaultIndex(),searchText);
         Assert.assertFalse(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     @After
-    public void doAfterClass() {
-        if (getDevice() != null) {
+    public void quit() {
+        if (this.getDevice() != null) {
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
         }
     }
 }

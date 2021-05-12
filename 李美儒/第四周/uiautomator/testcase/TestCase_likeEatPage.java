@@ -1,5 +1,12 @@
 package com.uiautomator_plus.testcase.lmr;
 
+import android.view.KeyEvent;
+
+import androidx.test.uiautomator.UiCollection;
+import androidx.test.uiautomator.UiObject;
+import androidx.test.uiautomator.UiObject2;
+import androidx.test.uiautomator.UiObjectNotFoundException;
+import androidx.test.uiautomator.UiScrollable;
 import androidx.test.uiautomator.UiSelector;
 
 import com.uiautomator_plus.core.BaseTest;
@@ -7,6 +14,7 @@ import com.uiautomator_plus.po.lmr.EntrancePage;
 import com.uiautomator_plus.po.lmr.LikeEatPage;
 import com.uiautomator_plus.po.lmr.LoginPage;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,6 +43,7 @@ public class TestCase_likeEatPage extends BaseTest {
         getEngine().click("text="+myFavorite,likeEatPage.getSearchMyFavoriteIndex());
         getDevice().pressEnter();
         Assert.assertFalse(getEngine().isElementPresent("text="+likeEatPage.getSearchDefaultText(),likeEatPage.getSearchDefaultIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //改变搜索框默认值测试
@@ -51,13 +60,43 @@ public class TestCase_likeEatPage extends BaseTest {
         getEngine().click("text="+likeEatPage.getSearchDefaultText(),likeEatPage.getSearchDefaultIndex());
         getDevice().pressEnter();
         Assert.assertFalse(getEngine().isElementPresent("text=苹果",0));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
-
+    //爱吃食物介绍测试
+    //步骤描述：点击任意一个爱吃的食物，查看食物名称，再查看具体输入介绍
+    //bug描述：食物名称与具体食物介绍不符
     @Test
-    public void test(){
+    public void test_click_myLikeFood_introduction(){
         getEngine().click("text="+likeEatPage.getLikePageText(),likeEatPage.getLikePageIndex());
-//        UiSelector uiSelector=new UiSelector().fromParent(new UiSelector().text("西红柿炒鸡蛋")).childSelector(new UiSelector().className("android.view.View"));
-        getEngine().click("class="+likeEatPage.getDeleteButtonClassName(),8);
+        String expectedName=getEngine().getText("text="+likeEatPage.getLikeFoodText(),likeEatPage.getLikeFoodIndex());
+        getEngine().click("text="+likeEatPage.getLikeFoodText(),likeEatPage.getLikeFoodIndex());
+        Assert.assertTrue(getEngine().isElementPresent("text="+likeEatPage.getClickLikeFoodTitleText(),likeEatPage.getClickLikeFoodTitleIndex()));
+        String actualName=getEngine().getText("text="+likeEatPage.getClickLikeFoodTitleText(),likeEatPage.getClickLikeFoodTitleIndex());
+        Assert.assertEquals(expectedName,actualName);
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+    }
+
+    //爱吃食物介绍内容测试
+    //步骤描述：点击一个爱吃食物，查看内容介绍
+    //bug描述：存在重复的步骤描述
+    @Test
+    public void test_myLikeFood_content() throws UiObjectNotFoundException {
+        getEngine().click("text="+likeEatPage.getLikePageText(),likeEatPage.getLikePageIndex());
+        getEngine().click("text="+likeEatPage.getLikeFoodText(),likeEatPage.getLikeFoodIndex());
+        Assert.assertTrue(getEngine().isElementPresent("text="+likeEatPage.getLikeFoodStepText(),likeEatPage.getLikeFoodStepIndex()));
+        UiScrollable scrollable=new UiScrollable(new UiSelector().className(likeEatPage.getLikeEatPageScrollView()).scrollable(true));
+        scrollable.scrollIntoView(new UiSelector().text("步骤4："));
+        Assert.assertTrue(getEngine().isElementPresent("text="+likeEatPage.getLikeFoodStepText(),likeEatPage.getLikeFoodStepIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+    }
+    @After
+    public void quit() {
+        if (this.getDevice() != null) {
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+        }
     }
 }

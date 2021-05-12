@@ -1,17 +1,28 @@
 package com.uiautomator_plus.testcase.lmr;
 
+import android.os.RemoteException;
+import android.view.KeyEvent;
+
+import androidx.test.uiautomator.By;
+import androidx.test.uiautomator.UiObject2;
+
 import com.uiautomator_plus.core.BaseTest;
 import com.uiautomator_plus.po.lmr.EntrancePage;
 import com.uiautomator_plus.po.lmr.LoginPage;
+import com.uiautomator_plus.po.lmr.MainPage;
 import com.uiautomator_plus.po.lmr.PersonPage;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.util.Objects.isNull;
+
 public class TestCase_personPage extends BaseTest {
     EntrancePage entrancePage=new EntrancePage();
     LoginPage loginPage=new LoginPage();
+    MainPage mainPage=new MainPage();
     PersonPage personPage=new PersonPage();
     @Before
     public void login(){
@@ -36,6 +47,7 @@ public class TestCase_personPage extends BaseTest {
         Assert.assertTrue(getEngine().isElementPresent("text="+personPage.getClickMyFollowUserStatusText(),personPage.getClickMyFollowUserStatusIndex()));
         String clickMyFollowUserStatus=getEngine().getText("text="+personPage.getClickMyFollowUserStatusText(),personPage.getClickMyFollowUserStatusIndex());
         Assert.assertEquals("已关注",clickMyFollowUserStatus);
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
 
@@ -54,6 +66,7 @@ public class TestCase_personPage extends BaseTest {
         Assert.assertTrue(getEngine().isElementPresent("text="+personPage.getClickMyFansUserStatusText(),personPage.getClickMyFansUserStatusIndex()));
         String clickMyFansUserStatus=getEngine().getText("text="+personPage.getClickMyFansUserStatusText(),personPage.getClickMyFansUserStatusIndex());
         Assert.assertEquals("关注",clickMyFansUserStatus);
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
     }
 
     //我的主页我的心得测试
@@ -72,10 +85,11 @@ public class TestCase_personPage extends BaseTest {
     @Test
     public void test_click_myFavoriteFood(){
         getEngine().click("text="+personPage.getPersonPageText(),personPage.getPersonPageIndex());
+        String expectedFavotiteFood=getEngine().getText("text="+personPage.getMyFirstFavoriteFoodText(),personPage.getMyFirstFavoriteFoodIndex());
         getEngine().click("text="+personPage.getMyFirstFavoriteFoodText(),personPage.getMyFirstFavoriteFoodIndex());
         Assert.assertTrue(getEngine().isElementPresent("text="+personPage.getClickMyFavoriteFoodText(),personPage.getClickMyFavoriteFoodIndex()));
-        String expectedFavotiteFood=getEngine().getText("text="+personPage.getMyFirstFavoriteFoodText(),personPage.getMyFirstFavoriteFoodIndex());
         String atualFavoriteFood=getEngine().getText("text="+personPage.getClickMyFavoriteFoodText(),personPage.getClickMyFavoriteFoodIndex());
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
         Assert.assertEquals(expectedFavotiteFood,atualFavoriteFood);
     }
 
@@ -83,7 +97,7 @@ public class TestCase_personPage extends BaseTest {
     //步骤描述：点击我的，点击设置按钮
     //bug描述：点击设置按钮没有反应
     @Test
-    public void text_click_setting(){
+    public void test_click_setting(){
         getEngine().click("text="+personPage.getPersonPageText(),personPage.getPersonPageIndex());
         getEngine().click("class="+personPage.getSettingButtonClassName(),personPage.getSettingButtonIndex());
         Assert.assertFalse(getEngine().isElementPresent("text="+personPage.getPersonPageUnameText(),personPage.getPersonPageUnameIndex()));
@@ -97,5 +111,50 @@ public class TestCase_personPage extends BaseTest {
         getEngine().click("text="+personPage.getPersonPageText(),personPage.getPersonPageIndex());
         getEngine().click("class="+personPage.getCameraButtonClassName(),personPage.getCameraButtonIndex());
         Assert.assertFalse(getEngine().isElementPresent("text="+personPage.getPersonPageUnameText(),personPage.getPersonPageUnameIndex()));
+    }
+
+    //我的主页关注用户测试
+    //步骤描述：点击我的，点击关注，点击任意一个用户，查看用户的具体介绍
+    @Test
+    public void test_click_myFollow_followProfile(){
+        getEngine().click("text="+personPage.getPersonPageText(),personPage.getPersonPageIndex());
+        getEngine().click("text="+personPage.getMyFollowText(),personPage.getMyFollowIndex());
+        Assert.assertTrue(getEngine().isElementPresent("text="+personPage.getClickMyFollowTitleText(),personPage.getClickMyFollowTitleIndex()));
+        String clickMyFollowTitle=getEngine().getText("text="+personPage.getClickMyFollowTitleText(),personPage.getClickMyFollowTitleIndex());
+        Assert.assertEquals("你关注的人",clickMyFollowTitle);
+        getEngine().click("text="+personPage.getClickMyFollowUserNameText(),personPage.getClickMyFollowUserNameIndex());
+        String clickMyFollowUserName=getEngine().getText("text="+personPage.getClickMyFollowUserNameText(),personPage.getClickMyFollowUserNameIndex());
+        Assert.assertEquals("用户名",clickMyFollowUserName);
+        String clickMyFollowUserStatus=getEngine().getText("text="+personPage.getClickMyFollowUserStatusText(),personPage.getClickMyFollowUserStatusIndex());
+        Assert.assertEquals("已关注",clickMyFollowUserStatus);
+        Assert.assertTrue(getEngine().isElementPresent("text="+personPage.getMyFirstFavoriteFoodText(),personPage.getMyFirstFavoriteFoodIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+    }
+
+    //我的主页我的粉丝用户测试
+    //步骤描述：点击我的，点击我的粉丝，点击任意一个用户，查看用户的具体介绍
+    @Test
+    public void test_click_myFans_fansProfile(){
+        getEngine().click("text="+personPage.getPersonPageText(),personPage.getPersonPageIndex());
+        getEngine().click("text="+personPage.getMyFansText(),personPage.getMyFansIndex());
+        String clickMyFansTitle=getEngine().getText("text="+personPage.getClickMyFansTitleText(),personPage.getClickMyFansTitleIndex());
+        Assert.assertEquals("我的粉丝",clickMyFansTitle);
+        getEngine().click("text="+personPage.getClickMyFansUserNameText(),personPage.getClickMyFansUserNameIndex());
+        String clickMyFansUserName=getEngine().getText("text="+personPage.getClickMyFansUserNameText(),personPage.getClickMyFansUserNameIndex());
+        Assert.assertEquals("用户名",clickMyFansUserName);
+        String clickMyFansUserStatus=getEngine().getText("text="+personPage.getClickMyFansUserStatusText(),personPage.getClickMyFansUserStatusIndex());
+        Assert.assertEquals("关注",clickMyFansUserStatus);
+        Assert.assertTrue(getEngine().isElementPresent("text="+personPage.getMyFirstFavoriteFoodText(),personPage.getMyFirstFavoriteFoodIndex()));
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+        getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+    }
+    @After
+    public void quit() {
+        if (this.getDevice() != null) {
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+            getDevice().pressKeyCode(KeyEvent.KEYCODE_BACK);
+        }
     }
 }

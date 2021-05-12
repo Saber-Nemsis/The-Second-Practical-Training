@@ -47,7 +47,7 @@ public class MainPage {
     private int clickInstanceAndFrozenButtonScrollLastViewIndex=1;
 
     //点击导航栏零食饮品按钮出现的分类显示列表最后一个的text和index
-    private String clickSnacksAndDrinksButtonScrollLastViewText="速食";
+    private String clickSnacksAndDrinksButtonScrollLastViewText="零食";
     private int clickSnacksAndDrinksButtonScrollLastViewIndex=1;
 
     //返回键的text和index

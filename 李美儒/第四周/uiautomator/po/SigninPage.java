@@ -18,6 +18,14 @@ public class SigninPage {
     private String logonButtonText="注册并登录";
     private int logonButtonIndex=0;
 
+    //确定的text和index
+    private String confirmText="确定";
+    private int confirmIndex=0;
+
+    //app停止运行的text和index
+    private String appQuitText="很抱歉，“冰箱新食客”已停止运行。";
+    private int appQuitIndex=0;
+
     public String getUnameETClassName() {
         return unameETClassName;
     }
@@ -48,5 +56,21 @@ public class SigninPage {
 
     public int getLogonButtonIndex() {
         return logonButtonIndex;
+    }
+
+    public String getConfirmText() {
+        return confirmText;
+    }
+
+    public int getConfirmIndex() {
+        return confirmIndex;
+    }
+
+    public String getAppQuitText() {
+        return appQuitText;
+    }
+
+    public int getAppQuitIndex() {
+        return appQuitIndex;
     }
 }

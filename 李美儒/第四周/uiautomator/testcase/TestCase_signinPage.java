@@ -29,6 +29,8 @@ public class TestCase_signinPage extends BaseTest {
         getEngine().clearAndType("class="+signinPage.getPwdETClassName(),signinPage.getPwdETIndex(),pwd);
         getEngine().clearAndType("class="+signinPage.getAgainTypeETClassName(),signinPage.getAgainTypeETIndex(),pwd);
         getEngine().click("text="+signinPage.getLogonButtonText(),signinPage.getLogonButtonIndex());
+        Assert.assertTrue(getEngine().isElementPresent("text="+signinPage.getAppQuitText(),signinPage.getAppQuitIndex()));
+        getEngine().click("text="+signinPage.getConfirmText(),signinPage.getConfirmIndex());
         Assert.assertTrue(getEngine().isElementPresent("text="+mainPage.getMainPageButtonText(),mainPage.getMainPageButtonIndex()));
     }
 
@@ -45,6 +47,8 @@ public class TestCase_signinPage extends BaseTest {
         getEngine().clearAndType("class="+signinPage.getPwdETClassName(),signinPage.getPwdETIndex(),pwd);
         getEngine().clearAndType("class="+signinPage.getAgainTypeETClassName(),signinPage.getAgainTypeETIndex(),againTypePwd);
         getEngine().click("text="+signinPage.getLogonButtonText(),signinPage.getLogonButtonIndex());
-        Assert.assertFalse(getEngine().isElementPresent("text="+mainPage.getMainPageButtonText(),mainPage.getMainPageButtonIndex()));
+        Assert.assertTrue(getEngine().isElementPresent("text="+signinPage.getAppQuitText(),signinPage.getAppQuitIndex()));
+        getEngine().click("text="+signinPage.getConfirmText(),signinPage.getConfirmIndex());
+        Assert.assertTrue(getEngine().isElementPresent("text="+mainPage.getMainPageButtonText(),mainPage.getMainPageButtonIndex()));
     }
 }

@@ -14,9 +14,21 @@ public class LikeEatPage {
     private String searchDefaultText="春菜";
     private int searchDefaultIndex=0;
 
-    //删除按钮class和index
-    private String deleteButtonClassName="android.view.View";
-    private int deleteButtonIndex=1;
+
+    //爱吃食物名称text和index
+    private String likeFoodText="西红柿炒鸡蛋";
+    private int likeFoodIndex=0;
+
+    //点击爱吃食物之后食物介绍text和index
+    private String clickLikeFoodTitleText="外加里嫩~炸豆腐丸子";
+    private int clickLikeFoodTitleIndex=0;
+
+    //爱吃食物步骤text和index
+    private String likeFoodStepText="豆腐用勺子捣碎";
+    private int likeFoodStepIndex=0;
+
+    private String likeEatPageScrollView="android.widget.ScrollView";
+
 
     public String getLikePageText() {
         return likePageText;
@@ -42,11 +54,31 @@ public class LikeEatPage {
         return searchDefaultIndex;
     }
 
-    public String getDeleteButtonClassName() {
-        return deleteButtonClassName;
+    public String getLikeFoodText() {
+        return likeFoodText;
     }
 
-    public int getDeleteButtonIndex() {
-        return deleteButtonIndex;
+    public int getLikeFoodIndex() {
+        return likeFoodIndex;
+    }
+
+    public String getClickLikeFoodTitleText() {
+        return clickLikeFoodTitleText;
+    }
+
+    public int getClickLikeFoodTitleIndex() {
+        return clickLikeFoodTitleIndex;
+    }
+
+    public String getLikeFoodStepText() {
+        return likeFoodStepText;
+    }
+
+    public int getLikeFoodStepIndex() {
+        return likeFoodStepIndex;
+    }
+
+    public String getLikeEatPageScrollView() {
+        return likeEatPageScrollView;
     }
 }
